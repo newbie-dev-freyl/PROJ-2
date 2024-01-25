@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+:root {
+    @each $prop, $data in $font {
+        @if $prop == "family" {
+            @each $name, $value in $data {
+                --ff-#{$name}: #{$value}; 
+            }
+
+        } @else if $prop == "size" {
+            @each $size, $value in $data {
+                --fs-#{$size}: #{$value};
+            }
+
+        } @else {
+            @each $weight, $value in $data {
+                --fw-#{$weight}: #{$value};
+            }
+        }
+    }
+
+    @each $size, $value in $sizes {
+        --#{$size}: #{$value};
+    }
+}

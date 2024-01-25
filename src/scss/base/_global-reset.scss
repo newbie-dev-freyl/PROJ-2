@@ -1,0 +1,84 @@
+@use '../abstracts/' as *;
+
+//RESET 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5; 
+}
+
+img, svg, picture {
+    display: block;
+    min-width: 100%;
+}
+
+h1, h2, h3, h4 {
+    line-height: .9;
+    font-weight: var(--fw-700);
+
+    @include breakpoint(tablet) {
+        line-height: .95;
+    }
+}
+
+ul[role=list],
+ol[role=list] {
+    list-style: none;
+}
+
+button {
+    border: 0px;
+    cursor: pointer; 
+}
+
+a[class] {
+    text-decoration: none;
+    color: currentColor;
+}
+
+//GLOBAL
+
+body {
+    background: rosybrown;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+}
+
+h1 {
+    font-size: var(--fs-1100);
+}
+
+h2 {
+    font-size: var(--fs-1000);
+}
+
+h3 {
+    font-size: var(--fs-600);
+}
+
+h4 {
+    font-size: var(--fs-500);
+}
+
