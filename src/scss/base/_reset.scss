@@ -34,12 +34,19 @@ img, svg, picture {
     min-width: 100%;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     line-height: .9;
-    font-weight: var(--fw-700);
 
     @include breakpoint(tablet) {
         line-height: .95;
+    }
+}
+
+h3, h4 {
+    line-height: 1;
+
+    @include breakpoint(tablet) {
+        line-height: 1.1;
     }
 }
 
